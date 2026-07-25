@@ -100,9 +100,6 @@ git init | Inicia o repositório no diretório do projeto
 git add . | Rastreia os arquivos para adicionados/modificados/excluido, salvando suas modificações[^1]
 git commit -m "Mensagem" | Todos os arquivos rastreados são guardados juntos no mesmo "commit" e descritos pela mensagem[^2]
 
-[^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
-[^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
-
 ### GitHub
 Para salvar um arquivo de maneira remota na nuvem, é utilizado o GitHub. Tudo que está no repositório local é enviado para um repositório no site que pode ser acessado de qualquer lugar. O passo a passo a seguir cobre o processo de enviar os arquivos locais para um repositório remoto:
 
@@ -119,7 +116,7 @@ git config --global user.name "seu-usuario" | Adicione o seu nome de usuário do
 
 Comandos | Significado
 --- | ---
-git remote add \<nome do destino\> \<link de repositorio\> | Cria um novo destino remoto com um link para determinado repositório[^3].
+git remote add \<nome do destino\> \<link de repositorio\> | Cria um novo destino remoto com um link para determinado repositório.
 git remote remove \<nome do destino\> | Remove um destino criado.
 git remote set-url \<nome do destino\> \<novo link\> | Altera o link de determinado destino já existente.
 git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto.
@@ -127,10 +124,39 @@ git remote get-url \<nome do destino\> | Ver link definido para determinado dest
 ## 3. Tabela Verdade
 
 ## 4. Tipos de variáveis
+&emsp;Os números, caracteres e dados de um modo geral quando armazenados na memória do computador ocupam uma determinada quantidade de espaço. A depender do tipo de dado que vai ser guardado, ele pode ocupar mais ou menos espaço. Como podemos saber quanto espaço aquele dado deve ocupar? Para isso existem os _**tipos de dados**_.<br><br>
+&emsp;Pela linguagem C ser estaticamente tipada, você é obrigado a sempre indicar o tipo de uma variável quando esta for declarada (algumas linguagens fazem isso automaticamente para você), informando o compilador quanto espaço aquela informação vai ocupar na memória.<br><br>
+&emsp;Assim, existem diversos tipos de dados, mas os mais fundamentais que serão usados nesse primeiro período são:
 
+Sintaxe | Nome | Descrição
+--- | --- | ---
+**int** | Inteiro | Guarda números inteiros, negativos e positivos (-4, 0, 2 etc).
+**float** | Real | Guarda números reais (3.1415, 0.5, 10.00 etc).
+**char** | Caractere | Guarda um único caractere ('a', 'b', 'c' etc).
+
+&emsp;Para declarar variáveis de determinado tipo, deve-se escrever sua sintaxe primeiro seguido do nome[^3] pelo qual aquela variável vai ser referida posteriormente e opcionalmente atribuir um valor inicial.
+
+```cpp
+int nome_da_variavel;
+```
+
+&emsp;Ou
+
+```cpp
+int nome_da_variavel = 10;
+```
+
+&emsp;Note que antes do valor inicial deve haver um sinal de igualdade indicando atribuição e obrigatoriamente toda declaração em C deve terminar com ponto e vírgula (;)!
+
+> [!IMPORTANT]
+> Uma má prática muito comum entre programadores é nomear variáveis abreviando e isso é fortemente contraindicado devido a dificultar a compreensão ao fazer manutenção do código ou ser lido por outros desenvolvedores! Nomeie suas variáveis de um modo mais descritivo possível!<br><br>**Evite**: num_prox_al<br> **Faça**: numero_proximo_aluno.
 
 ## 5. Operações aritméticas
 
 ## 6. Condicional
 
 ## 7. Repetição
+
+[^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
+[^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
+[^3]: Nomes de variáveis *não podem* começar com números.
