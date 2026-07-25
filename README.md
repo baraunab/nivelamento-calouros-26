@@ -198,7 +198,7 @@ int main() {
 ```
 
 > [!IMPORTANT]
-> **OBS**: Tudo o que for colocado depois de `//` ou assim `/* texto aqui */` será ignorado pelo compilador e serve para anotações e informações relevantes!
+> **OBS**: Tudo o que for colocado depois de `//` na mesma linha ou entre `/*` e `*/` em mais de uma linha será ignorado pelo compilador e serve para notinhas e informações relevantes sobre partes do código!
 
 &emsp;Ambos esses códigos produzem exatamente o mesmo resultado, mas concordemos que no segundo exemplo é bem mais fácil entender o que está acontecendo. Comentários e nomes de variáveis descritivas são indispensáveis!<br><br>
 &emsp;Um código bem indentado tem um espaçamento nos blocos de código, por exemplo, dentro de funções ou dentro de condicionais. Um exemplo disso:
@@ -233,6 +233,72 @@ if (idade < 18) {
 > Uma dica é: a linha que abre a chave "{" deve estar alinhada com a chave fechada "}" 
 
 ## 8. Repetição
+&emsp;Estruturas de repetição, como o nome diz, são blocos de código de irão se repetir uma determinada quantidade de vezes ao longo de seu código.<br><br>
+&emsp;Existem três repetição na linguagem C: `for`, `while` e `do while`. Na maioria dos casos elas são intercambiavéis mas algumas situações são resolvidas mais facilmente com uma repetição específica.
+
+### Repetição `while`
+&emsp;Essa repetição funciona com base numa condição de `verdadeiro` ou `falso` apenas. Sua sintaxe é: `while (condição)`:
+```cpp
+// declara variável de contagem
+int contador = 0;
+
+// verifica se contador é maior que 10
+while (contador < 2) {
+    // caso não seja maior que 10 executar bloco interno
+    printf("%d\n", contador)
+
+    // incrementar contador por 1 e voltar para o inicio da repetição verificando se contador
+    // é maior que 10 novamente
+    contador += 1;
+}
+```
+&emsp;Resultado:
+```bash
+0
+1
+2
+```
+&emsp;No exemplo acima, o código dentro do `while` é repetido fazendo a incrementação do contador até que ele chegue em `10`, fazendo com que a condição `contador < 10` se torne `falso` e interrompendo assim a repetição.
+
+> [!IMPORTANT]
+> Perceba que se essa condição nunca chegar em `falso` o bloco do `while` se repetirá infinitamente. Isso pode acontecer caso o `contador` não seja incrementado, por exemplo, assim seu valor nunca será maior que `10` e sim sempre `0`.
+
+### Repetição `for`
+&emsp;O `for` é muito similar ao `while` exceto que ele possibilita a criação de uma variável contadora e incrementação na prórpia sintaxe.
+
+```cpp
+for (int contador = 0; contador < 2; ++contador) {
+    printf("%d\n", contador);
+}
+```
+&emsp;Resultado:
+```bash
+0
+1
+2
+```
+
+&emsp;O código de exemplo acima produz exatamente o mesmo resultado do exemplo apresentado sobre o `while`.
+
+### Repetição `do while`
+&emsp;Ao contrário das repetições anteriores que avaliam a condição antes de executar o código dentro do bloco, o `do while` executa primeiro e depois faz a avaliação.
+
+```cpp
+int contador = 0;
+
+do {
+    // contador é incrementado
+    contador += 1;
+
+    // exibe na tela
+    printf("%d\n", contador);
+} while (contador < 2); // avalia condição no final
+```
+&emsp;Resultado:
+```bash
+1
+2
+```
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
 [^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
