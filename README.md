@@ -155,8 +155,85 @@ int nome_da_variavel = 10;
 
 ## 6. Condicional
 
-## 7. Repetição
+## 7. Identação e Legibilidade
+&emsp;É de grande importância que vocês, como desenvolvedores, escrevam um código legível. Pode não parecer um detalhe para se dar tanta ênfase assim mas acreditem, é sim.<br><br>
+&emsp;Existem muitas maneiras e estilos diferentes de escrever código que não afetam o resultado final do programa mas que podem ser mais ou menos confusos para quem estiver desenvolvendo. Um exemplo disso é o seguinte programa:
+
+```cpp
+#include <stdio.h>
+int main()
+{
+float d;float dv;float r;
+scanf("%f %f",&d,&dv);
+printf("%f\n",d/dv);return 0;
+}
+```
+
+&emsp;O que é `d`? O que é `dv`? Certo, eles dividem. É uma calculadora de divisão? <br><br>
+&emsp;Aposto que com algum esforço vai ser possível descobrir o que o programa faz, mas imagine programas verdadeiramente grandes e complexos! Não seria esse esforço poupado se ao invés disso fizessemos:
+
+```cpp
+/*
+    Programa que recebe do usuário dois números e apresenta
+    na tela o resultado da divisão entre eles.
+*/
+
+#include <stdio.h>
+
+int main() {
+    // declaração das variáveis
+    float divisor;
+    float dividendo;
+    float resultado;
+
+    // entrada dos números pelo usuário
+    scanf("%f %f", &divisor, &dividendo);
+
+    // cálculo da divisão
+    resultado = diviso / dividendo;
+
+    // exibição do resultado na tela
+    printf("%f\n", resultado);
+}
+```
+
+> [!IMPORTANT]
+> **OBS**: Tudo o que for colocado depois de `//` ou assim `/* texto aqui */` será ignorado pelo compilador e serve para anotações e informações relevantes!
+
+&emsp;Ambos esses códigos produzem exatamente o mesmo resultado, mas concordemos que no segundo exemplo é bem mais fácil entender o que está acontecendo. Comentários e nomes de variáveis descritivas são indispensáveis!<br><br>
+&emsp;Um código bem indentado tem um espaçamento nos blocos de código, por exemplo, dentro de funções ou dentro de condicionais. Um exemplo disso:
+
+```cpp
+// código sem identação
+int idade = 20;
+
+if (idade < 18) {
+printf("menor de idade\n");
+} else {
+if (idade > 60) {
+printf("aposentado\n");
+return 0;
+}
+printf("maior de idade\n");
+}
+
+// código identado
+if (idade < 18) {
+    printf("menor de idade\n");
+} else {
+    if (idade > 60) {
+        printf("aposentado\n");
+        return 0;
+    }
+    printf("maior de idade\n");
+}
+```
+
+> [!IMPORTANT]
+> Uma dica é: a linha que abre a chave "{" deve estar alinhada com a chave fechada "}" 
+
+## 8. Repetição
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
 [^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
-[^3]: Nomes de variáveis *não podem* começar com números.
+[^3]: Nomes de variáveis *não podem* começar com números ou símbolos de pontuação.
