@@ -11,6 +11,11 @@ Repositório utilizado para armazenar exercícios e como base de estudos para in
 
 * [ 1. Lógica de Programação, Linguagem C e Ferramentas](#1-lógica-de-programação-linguagem-c-e-ferramentas)
 * [2. Git & GitHub](#2-git--github)
+* [3. Tabela Verdade](#3-tabela-verdade)
+* [4. Tipos de variáveis](#4-tipos-de-variáveis)
+* [5. Operações aritméticas](#5-operações-aritméticas)
+* [6. Condicional](#6-condicional)
+* [7. Repetição](#7-repetição)
 
 </details>
 
