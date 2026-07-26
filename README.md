@@ -324,7 +324,7 @@ do {
 ```
 
 <p align="center">
-<img width="720" height="480" alt="calouros_final" src="https://github.com/user-attachments/assets/4b4fd4a9-96a7-4d24-baa4-2f6c5d048a85" />
+<img width="720" height="480" alt="calouros_final" src="https://github.com/user-attachments/assets/f2f26563-93cf-4e64-9889-6afb95bf6277" />
 </p>
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
