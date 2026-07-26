@@ -101,11 +101,9 @@ Um dos principais elementos que torna o Git na melhor ferramenta de trabalhos em
 
 Comandos | Significado
 --- | ---
-git checkout -b nome-branch | Cria uma nova ramificação a partir da sua branch atual[^*]
+git checkout -b nome-branch | Cria uma nova ramificação a partir da sua branch atual[^3]
 
 <img width="760" height="202" alt="image" src="https://github.com/user-attachments/assets/1d77facb-aad8-4f25-b74d-7ce18768c0de" />
-
-- Branches podem ter o nome que descreve o que será feito nela
 
 <hr>
 
@@ -121,7 +119,7 @@ git checkout nome-branch | Muda de ramificação
 <hr>
 
 3. Mesclando as modificações
-  - Na sua branch `main`, você deve puxar as novas mudanças da sua branch de modificações com o comando:7
+  - Na sua branch `main`, você deve puxar as novas mudanças da sua branch de modificações com o comando:
 
 Comandos | Significado
 --- | ---
@@ -212,7 +210,7 @@ Sintaxe | Nome | Descrição
 **float** | Real | Guarda números reais (3.1415, 0.5, 10.00 etc).
 **char** | Caractere | Guarda um único caractere ('a', 'b', 'c' etc).
 
-&emsp;Para declarar variáveis de determinado tipo, deve-se escrever sua sintaxe primeiro seguido do nome[^3] pelo qual aquela variável vai ser referida posteriormente e opcionalmente atribuir um valor inicial.
+&emsp;Para declarar variáveis de determinado tipo, deve-se escrever sua sintaxe primeiro seguido do nome[^4] pelo qual aquela variável vai ser referida posteriormente e opcionalmente atribuir um valor inicial.
 
 ```cpp
 int nome_da_variavel;
@@ -453,4 +451,5 @@ do {
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
 [^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
-[^3]: Nomes de variáveis *não podem* começar com números ou símbolos de pontuação.
+[^3]: Branches podem ter o nome que descreve o que será feito nela
+[^4]: Nomes de variáveis *não podem* começar com números ou símbolos de pontuação.
