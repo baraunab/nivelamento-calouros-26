@@ -71,6 +71,12 @@ git remote remove \<nome do destino\> | Remove um destino criado.
 git remote set-url \<nome do destino\> \<novo link\> | Altera o link de determinado destino já existente.
 git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto
 
+3. Atualizando o repositório remoto
+  - Para enviar as modificações de volta para a nuvem, é utilizado o seguinte comando:
+Comandos | Significado
+--- | ---
+git push | Envia as modificações para o repositório remoto
+
 ### Indo além...
 Complementando o que foi falado durante nossa prática introdutória do Git durando o nivelamento, vamos adicionar nessa seção alguns elementos a mais.
 
@@ -147,6 +153,12 @@ git merge nome-branch | Puxa as mudanças dos commits da branch descrita no coma
 
 <hr>
 
+4. Mandando uma branch para a nuvem
+  - Para mandar uma nova branch para o repositório remoto, o comando `push` recebe algumas informações a mais
+Comandos | Significado
+--- | ---
+git push --set-upstream origin nome-branch | Envia uma branch e todas as suas modifcações para o repositório remoto
+
 ## 2. Lógica de Programação, Linguagem C e Ferramentas
 ### Conceitos Básicos
 - Algoritmos: conjunto de instruções lógicas, finitas e bem definidas, que tem o objetivo de executar tarefas específicas <br>
@@ -193,7 +205,7 @@ int main () {
 #### Qual compilador usar e como?
   - Para Windows, a melhor opção de compilador para a Linguagem C é o <a href="https://www.mingw-w64.org/">**MingGW-W64**</a>
   - Para Linux o mais utilizado é o <a href="https://gcc.gnu.org/">GNU GCC</a>.
-  - Quando o MinGW-W64 ou GNU GCC estiver instalado no seu sistema será possível invocar o comando `gcc` do terminal. Digite `gcc --verison` para verificar! Isso irá exibir a versão do gcc instalada em sua máquina.
+  - Quando o MinGW-W64 ou GNU GCC estiver instalado no seu sistema será possível invocar o comando `gcc` do terminal. Digite `gcc --version` para verificar! Isso irá exibir a versão do gcc instalada em sua máquina.
 
 <img width="922" height="396" alt="image" src="https://github.com/user-attachments/assets/b3cb1591-141b-40ee-bb93-450075968789" />
 
@@ -480,7 +492,9 @@ do {
 
 <p align="center">
 <img width="720" height="480" alt="calouros_final" src="https://github.com/user-attachments/assets/f2f26563-93cf-4e64-9889-6afb95bf6277" />
-</p>
+</p> 
+
+###### desenho por [kprincipe](https://github.com/kprincipe) !!!
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
 [^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
