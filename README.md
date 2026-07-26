@@ -1,8 +1,11 @@
-# Nivelamento TADS - Calouros 2026/2
+# Nivelamento TADS - Calouros 2026/2 📑
 Repositório utilizado para armazenar exercícios e como base de estudos para introdução ao conteúdo de Git & GitHub.
 
 ## Introdução
 Olá! Preparamos esse super resumão de tudo que falamos durante o nivelamento. Use esse arquivo como uma pequena cola durante as aulas do período! :D
+
+> [!TIP]
+> Salve esse repositório para voltar depois clicando na estrelinha 🌟 ! 
 
 <details open><summary>
 
@@ -68,6 +71,12 @@ git remote remove \<nome do destino\> | Remove um destino criado.
 git remote set-url \<nome do destino\> \<novo link\> | Altera o link de determinado destino já existente.
 git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto
 
+3. Atualizando o repositório remoto
+  - Para enviar as modificações de volta para a nuvem, é utilizado o seguinte comando:
+Comandos | Significado
+--- | ---
+git push | Envia as modificações para o repositório remoto
+
 ### Indo além...
 Complementando o que foi falado durante nossa prática introdutória do Git durando o nivelamento, vamos adicionar nessa seção alguns elementos a mais.
 
@@ -93,6 +102,15 @@ git clone https://github.com/usuario/nome-projeto.git |  Cria um novo diretório
   - Utilizando os comandos do DOS previamente mencionados, acessamos os arquivos dentro do novo diretório!
 
 <img width="800" height="449" alt="Gravando2026-07-25210304-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/6d1504a4-0315-4f7d-b76d-88cbc652d3c4" />
+
+<hr>
+
+4. Atualizando o repositório local
+  - Com o projeto na nossa máquina, podemos atualizar o repositório e puxar modificações da nuvem com o seguinte comando:
+
+Comandos | Significado
+--- | ---
+git pull | Puxa tudo que está na nuvem para o repositório local
 
 <hr>
 
@@ -135,6 +153,12 @@ git merge nome-branch | Puxa as mudanças dos commits da branch descrita no coma
 
 <hr>
 
+4. Mandando uma branch para a nuvem
+  - Para mandar uma nova branch para o repositório remoto, o comando `push` recebe algumas informações a mais
+Comandos | Significado
+--- | ---
+git push --set-upstream origin nome-branch | Envia uma branch e todas as suas modifcações para o repositório remoto
+
 ## 2. Lógica de Programação, Linguagem C e Ferramentas
 ### Conceitos Básicos
 - Algoritmos: conjunto de instruções lógicas, finitas e bem definidas, que tem o objetivo de executar tarefas específicas <br>
@@ -143,8 +167,6 @@ Exemplo: Passo a passo de fazer café:
 Algoritmo em Texto | Fluxograma
 --- | ---
 <img width="479" height="176" alt="image" src="https://github.com/user-attachments/assets/90ac1526-6e79-40c2-a263-c709df4006fe" /> | <img width="256" alt="image" src="https://github.com/user-attachments/assets/44f7c739-0088-4671-8918-2c3daf95c139" />
-
-
 
  - IDE: Significa "Ambiente de Desenvolvimento Integrado", aplicação utilizada para codificar programas.
 
@@ -183,7 +205,7 @@ int main () {
 #### Qual compilador usar e como?
   - Para Windows, a melhor opção de compilador para a Linguagem C é o <a href="https://www.mingw-w64.org/">**MingGW-W64**</a>
   - Para Linux o mais utilizado é o <a href="https://gcc.gnu.org/">GNU GCC</a>.
-  - Quando o MinGW-W64 ou GNU GCC estiver instalado no seu sistema será possível invocar o comando `gcc` do terminal. Digite `gcc --verison` para verificar! Isso irá exibir a versão do gcc instalada em sua máquina.
+  - Quando o MinGW-W64 ou GNU GCC estiver instalado no seu sistema será possível invocar o comando `gcc` do terminal. Digite `gcc --version` para verificar! Isso irá exibir a versão do gcc instalada em sua máquina.
 
 <img width="922" height="396" alt="image" src="https://github.com/user-attachments/assets/b3cb1591-141b-40ee-bb93-450075968789" />
 
@@ -308,6 +330,26 @@ int nome_da_variavel = 10;
 > Uma má prática muito comum entre programadores é nomear variáveis abreviando e isso é fortemente contraindicado devido a dificultar a compreensão ao fazer manutenção do código ou ser lido por outros desenvolvedores! Nomeie suas variáveis de um modo mais descritivo possível!<br><br>**Evite**: num_prox_al<br> **Faça**: numero_proximo_aluno.
 
 ## 5. Operações aritméticas
+A linguagem C utiliza os seguintes operadores para fazer cálculos:
+
+Operador | Significado | Exemplo
+--- | --- | ---
+\+ | Soma | int x = 2 + 2; // x = 4
+\- | Subtração | int x = 2 - 2; // x = 0
+\* | Multiplicação | int x = 2 * 2; // x = 4
+/ | Divisão | int x = 2 / 2; // x = 1
+% | Módulo (Divide e pega o resto) | x = 3 % 2; // x receberá o valor 1
+++ | Incremento (Soma 1) | x++;
+-- | Decremento (Subtrai 1) | x--;
+
+- É importante relembrar que um cálculo deve seja atribuido à uma variável, para que o seu resultado seja armazenado nela!
+
+``` cpp
+2 + 2; // o resultado 4 não estará guardado em nenhum lugar
+
+int soma = 2 + 2; // o resultado será guardado na variável soma
+printf("2 + 2 = %d", soma) // o programa irá imprimir: 2 + 2 = 4
+```
 
 ## 6. Condicional
 &emsp;Muito do fluxo de um programa envolve a tomada de decisão com base em determinadas situações. Pode-se dizer que é como se o programa fizesse perguntas ao longo de sua execução para saber o que fazer caso uma determinada situação se apresente. O usuário digitou a senha correta? Liberar acesso. Caso não, bloquear acesso.<br><br>
@@ -448,9 +490,13 @@ do {
 2
 ```
 
+<hr>
+
 <p align="center">
 <img width="720" height="480" alt="calouros_final" src="https://github.com/user-attachments/assets/f2f26563-93cf-4e64-9889-6afb95bf6277" />
-</p>
+</p> 
+
+###### resumo por [baraunab](https://github.com/baraunab) & [kprincipe](https://github.com/kprincipe); desenho por kprincipe !!!
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
 [^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
