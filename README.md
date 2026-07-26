@@ -19,8 +19,6 @@ Olá! Preparamos esse super resumão de tudo que falamos durante o nivelamento. 
 * [6. Condicional](#6-condicional)
 * [7. Repetição](#7-repetição)
 
-#2-lógica-de-programação-linguagem-c-e-ferramentas
-
 </details>
 
 ## 0. Terminal e DOS
