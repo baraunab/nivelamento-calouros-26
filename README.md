@@ -38,6 +38,8 @@ Comandos | Significado
 git init | Inicia o repositório no diretório do projeto
 git add . | Rastreia os arquivos para adicionados/modificados/excluido, salvando suas modificações[^1]
 git commit -m "Mensagem" | Todos os arquivos rastreados são guardados juntos no mesmo "commit" e descritos pela mensagem[^2]
+git status | Mostra o estado do repositório e o rastreio dos arquivos
+git log | Mostra o histórico de commits
 
 ### GitHub
 Para salvar um arquivo de maneira remota na nuvem, é utilizado o GitHub. Tudo que está no repositório local é enviado para um repositório no site que pode ser acessado de qualquer lugar. O passo a passo a seguir cobre o processo de enviar os arquivos locais para um repositório remoto:
@@ -69,14 +71,65 @@ Uma vez que temos nosso repositório na nuvem, a gente consegue devolver ele par
 1. Pegar a URL
   - Na página do nosso repositório remoto no GitHub, clicamos no botão `CODE` e copiamos a URL.
 <img width="599" height="525" alt="image" src="https://github.com/user-attachments/assets/130ee0d2-0659-4575-a21d-daff1f6bc312" />
+
+<hr>
+
 2. Clonando no Terminal
   - Em um diretório, utilizamos o seguinte comando:
+
 Comandos | Significado
 --- | ---
 git clone https://github.com/usuario/nome-projeto.git |  Cria um novo diretório contendo o projeto salvo na URL
+
+<hr>
+
 3. Acessando o projeto
   - Utilizando os comandos do DOS previamente mencionados, acessamos os arquivos dentro do novo diretório!
 
+<img width="800" height="449" alt="Gravando2026-07-25210304-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/6d1504a4-0315-4f7d-b76d-88cbc652d3c4" />
+
+<hr>
+
+### Branches
+Um dos principais elementos que torna o Git na melhor ferramenta de trabalhos em equipe são as **branches** (galhos). Imagine que seu repositório é uma árvore e todos os arquivos, com um código estável e funcional, formam o tronco dessa árvore. A partir do tronco, é possível que um novo galho nasça, uma ramificação do tronco que possui acesso aos "elementos" do tronco. 
+- Nesse exemplo, o tronco representa a branch `main`, o lugar onde a versão estável de um projeto é guardada. Ela deve ser preservada com segurança para garantir que nada importante do progresso seja perdido.
+- Dentro das branches é possível fazer adição de funcionalidades, testes e todo tipo de modificação.
+- Uma vez que as modificações estejam estáveis e funcionais, é possível integrar as novas modificações na branch principal, aumentando e melhorando o projeto de maneira segura.
+
+1. Criando uma branch
+  - Para criar uma branch é possível utilizar os seguintes comandos:
+
+Comandos | Significado
+--- | ---
+git checkout -b nome-branch | Cria uma nova ramificação a partir da sua branch atual[^*]
+
+<img width="760" height="202" alt="image" src="https://github.com/user-attachments/assets/1d77facb-aad8-4f25-b74d-7ce18768c0de" />
+
+- Branches podem ter o nome que descreve o que será feito nela
+
+<hr>
+
+2. Modificando arquivos
+  - Dentro da sua nova branch, você pode criar novos arquivos, fazer modificações e criar novos commits. Quando todas as suas modificações estiverem **finalizadas e commitadas**, você deve voltar para a branch principal.
+
+Comandos | Significado
+--- | ---
+git checkout nome-branch | Muda de ramificação
+
+<img width="1031" height="372" alt="image" src="https://github.com/user-attachments/assets/64b2ce85-7b59-4471-97d8-139b28600f78" />
+
+<hr>
+
+3. Mesclando as modificações
+  - Na sua branch `main`, você deve puxar as novas mudanças da sua branch de modificações com o comando:7
+
+Comandos | Significado
+--- | ---
+git merge nome-branch | Puxa as mudanças dos commits da branch descrita no comando para a sua branch atual
+
+<img width="1114" height="627" alt="image" src="https://github.com/user-attachments/assets/1207d881-99a0-4ab6-9df4-b3e222b32381" />
+
+<hr>
 
 ## 2. Lógica de Programação, Linguagem C e Ferramentas
 ### Conceitos Básicos
