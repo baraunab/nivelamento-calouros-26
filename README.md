@@ -96,6 +96,15 @@ git clone https://github.com/usuario/nome-projeto.git |  Cria um novo diretório
 
 <hr>
 
+4. Atualizando o repositório local
+  - Com o projeto na nossa máquina, podemos atualizar o repositório e puxar modificações da nuvem com o seguinte comando:
+
+Comandos | Significado
+--- | ---
+git pull | Puxa tudo que está na nuvem para o repositório local
+
+<hr>
+
 ### Branches
 Um dos principais elementos que torna o Git na melhor ferramenta de trabalhos em equipe são as **branches** (galhos). Imagine que seu repositório é uma árvore e todos os arquivos, com um código estável e funcional, formam o tronco dessa árvore. A partir do tronco, é possível que um novo galho nasça, uma ramificação do tronco que possui acesso aos "elementos" do tronco. 
 - Nesse exemplo, o tronco representa a branch `main`, o lugar onde a versão estável de um projeto é guardada. Ela deve ser preservada com segurança para garantir que nada importante do progresso seja perdido.
@@ -143,8 +152,6 @@ Exemplo: Passo a passo de fazer café:
 Algoritmo em Texto | Fluxograma
 --- | ---
 <img width="479" height="176" alt="image" src="https://github.com/user-attachments/assets/90ac1526-6e79-40c2-a263-c709df4006fe" /> | <img width="256" alt="image" src="https://github.com/user-attachments/assets/44f7c739-0088-4671-8918-2c3daf95c139" />
-
-
 
  - IDE: Significa "Ambiente de Desenvolvimento Integrado", aplicação utilizada para codificar programas.
 
@@ -308,6 +315,26 @@ int nome_da_variavel = 10;
 > Uma má prática muito comum entre programadores é nomear variáveis abreviando e isso é fortemente contraindicado devido a dificultar a compreensão ao fazer manutenção do código ou ser lido por outros desenvolvedores! Nomeie suas variáveis de um modo mais descritivo possível!<br><br>**Evite**: num_prox_al<br> **Faça**: numero_proximo_aluno.
 
 ## 5. Operações aritméticas
+A linguagem C utiliza os seguintes operadores para fazer cálculos:
+
+Operador | Significado | Exemplo
+--- | --- | ---
+\+ | Soma | int x = 2 + 2; // x = 4
+\- | Subtração | int x = 2 - 2; // x = 0
+\* | Multiplicação | int x = 2 * 2; // x = 4
+/ | Divisão | int x = 2 / 2; // x = 1
+% | Módulo (Divide e pega o resto) | x = 3 % 2; // x receberá o valor 1
+++ | Incremento (Soma 1) | x++;
+-- | Decremento (Subtrai 1) | x--;
+
+- É importante relembrar que um cálculo deve seja atribuido à uma variável, para que o seu resultado seja armazenado nela!
+
+``` cpp
+2 + 2; // o resultado 4 não estará guardado em nenhum lugar
+
+int soma = 2 + 2; // o resultado será guardado na variável soma
+printf("2 + 2 = %d", soma) // o programa irá imprimir: 2 + 2 = 4
+```
 
 ## 6. Condicional
 &emsp;Muito do fluxo de um programa envolve a tomada de decisão com base em determinadas situações. Pode-se dizer que é como se o programa fizesse perguntas ao longo de sua execução para saber o que fazer caso uma determinada situação se apresente. O usuário digitou a senha correta? Liberar acesso. Caso não, bloquear acesso.<br><br>
