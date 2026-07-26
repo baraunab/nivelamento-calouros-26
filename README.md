@@ -85,7 +85,9 @@ Exemplo: Passo a passo de fazer café:
 
 Algoritmo em Texto | Fluxograma
 --- | ---
-<img width="479" height="176" alt="image" src="https://github.com/user-attachments/assets/90ac1526-6e79-40c2-a263-c709df4006fe" /> | <img width="283" height="520" alt="image" src="https://github.com/user-attachments/assets/bcd4063b-cfb9-4f8e-b835-69a45e63ed4b" />
+<img width="479" height="176" alt="image" src="https://github.com/user-attachments/assets/90ac1526-6e79-40c2-a263-c709df4006fe" /> | <img width="256" alt="image" src="https://github.com/user-attachments/assets/44f7c739-0088-4671-8918-2c3daf95c139" />
+
+
 
  - IDE: Significa "Ambiente de Desenvolvimento Integrado", aplicação utilizada para codificar programas.
 
