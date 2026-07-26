@@ -4,6 +4,9 @@ Repositório utilizado para armazenar exercícios e como base de estudos para in
 ## Introdução
 Olá! Preparamos esse super resumão de tudo que falamos durante o nivelamento. Use esse arquivo como uma pequena cola durante as aulas do período! :D
 
+> [!TIP]
+> Salve esse repositório para voltar depois clicando na estrelinha 🌟 ! 
+
 <details open><summary>
 
   ## Sumário
