@@ -189,6 +189,8 @@ Igualdade | ==
 Diferença | !=
 Maior | >
 Menor | <
+Maior ou igual | >=
+Menor ou Igual | <=
 
 &emsp;Um exemplo prático poderia ser a verificação de uma senha inserida pelo usuário:
 
