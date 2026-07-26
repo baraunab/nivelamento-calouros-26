@@ -134,7 +134,12 @@ Uma vez que temos nosso repositório na nuvem, a gente consegue devolver ele par
   - Na página do nosso repositório remoto no GitHub, clicamos no botão `CODE` e copiamos a URL.
 <img width="599" height="525" alt="image" src="https://github.com/user-attachments/assets/130ee0d2-0659-4575-a21d-daff1f6bc312" />
 2. Clonando no Terminal
-
+  - Em um diretório, utilizamos o seguinte comando:
+Comandos | Significado
+--- | ---
+git clone https://github.com/usuario/nome-projeto.git |  Cria um novo diretório contendo o projeto salvo na URL
+3. Acessando o projeto
+  - Utilizando os comandos do DOS previamente mencionados, acessamos os arquivos dentro do novo diretório!
 
 ## 3. Tabela Verdade
 
