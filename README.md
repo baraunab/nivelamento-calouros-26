@@ -179,6 +179,73 @@ int nome_da_variavel = 10;
 ## 5. Operações aritméticas
 
 ## 6. Condicional
+&emsp;Muito do fluxo de um programa envolve a tomada de decisão com base em determinadas situações. Pode-se dizer que é como se o programa fizesse perguntas ao longo de sua execução para saber o que fazer caso uma determinada situação se apresente. O usuário digitou a senha correta? Liberar acesso. Caso não, bloquear acesso.<br><br>
+&emsp;Os próprios programadores devem indicar no programa os casos para essas decisões e o que acontece quando o programa se depara com elas. Isso é feito através da _estrutura condicional_, que tem a sintaxe `if(condição)`.<br><br>
+&emsp;Quando se utiliza um `if`, temos que ter em mente que tudo o que acontece entre as parênteses é uma afirmação que pode ser evaluada como _verdadeira_ ou _falsa_ através de uma afirmação, chamamos isso de _proposição lógica_. Uma afirmação pode ser dos seguintes tipos:<br><br>
+
+Tipo | Sitaxe
+--- | ---
+Igualdade | ==
+Diferença | !=
+Maior | >
+Menor | <
+
+&emsp;Um exemplo prático poderia ser a verificação de uma senha inserida pelo usuário:
+
+```cpp
+// Variável que guarda uma senha numérica do usuário
+int senha_usuario = 4096;
+int senha_correta = 1234;
+
+// compara a senha do usuário com a senha correta, caso sejam iguais, exibir mensagem de acesso liberado
+if (senha_usuario == senha_correta) {
+    printf("acesso liberado!\n");
+}
+
+// compara senha do usuário com senha correta, caso sejam diferentes, exibir mensagem de acesso negado
+if (senha_usuario != senha_correta) {
+    printf("acesso negado! usuario não existe\n")
+}
+```
+
+&emsp;No fim de uma estrutura condicional, é possível também ligar um `else` para indicar um "caso contrário", assim não precisamos fazer dois blocos condicinais.
+
+```cpp
+// Variável que guarda uma senha numérica do usuário
+int senha_usuario = 4096;
+int senha_correta = 1234;
+
+// compara a senha do usuário com a senha correta, caso sejam iguais, exibir mensagem de acesso liberado
+if (senha_usuario == senha_correta) {
+    printf("acesso liberado!\n");
+} else { // caso contrário
+    printf("acesso negado! usuario não existe\n");
+}
+```
+
+&emsp;E esse caso contrário pode conter um `if` por si mesmo para cobrir casos mais específicos.
+
+```cpp
+// Variável que guarda uma senha numérica do usuário
+int senha_usuario = 4096;
+int senha_correta = 1234;
+
+// compara a senha do usuário com a senha correta, caso sejam iguais, exibir mensagem de acesso liberado
+if (senha_usuario == senha_correta) {
+    printf("acesso liberado!\n");
+} else if (senha_usuario != 1928) { // comparação adicional para senha do usuário, caso seja igual a 1928, indicar que senha foi banida 
+    printf("acesso negado! Senha banida\n");
+} else { // caso contrário, se nenhuma das anteriores forem verdadeiras
+    printf("acesso negado! usuario não existe\n");
+}
+```
+
+&emsp;É possível ter  mais de uma proposição desde que estejam ligadas por conectivos que relacionam elas, e estes conectivos são:<br><br>
+
+Conectivo | Sintaxe
+--- | ---
+e | &&
+ou | \|\|
 
 ## 7. Identação e Legibilidade
 &emsp;É de grande importância que vocês, como desenvolvedores, escrevam um código legível. Pode não parecer um detalhe para se dar tanta ênfase assim mas acreditem, é sim.<br><br>
