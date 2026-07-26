@@ -490,11 +490,13 @@ do {
 2
 ```
 
+<hr>
+
 <p align="center">
 <img width="720" height="480" alt="calouros_final" src="https://github.com/user-attachments/assets/f2f26563-93cf-4e64-9889-6afb95bf6277" />
 </p> 
 
-###### desenho por [kprincipe](https://github.com/kprincipe) !!!
+###### resumo por [baraunab](https://github.com/baraunab) & [kprincipe](https://github.com/kprincipe); desenho por kprincipe !!!
 
 [^1]: O `.` em `git add .` inclui todos os arquivos a serem rastreados. O `.` pode ser modificado pelo nome de um arquivo. Exemplo: Queremos rastrear o `arquivo.txt`, o comando será: `git add arquivo.txt`
 [^2]: O `-m` significa "menssagem", ele classifica que tudo que vem em seguida dentro de aspas duplas será uma menssagem descrevendo aquele commit.
