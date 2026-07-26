@@ -15,7 +15,70 @@ Olá! Preparamos esse super resumão de tudo que falamos durante o nivelamento. 
 
 </details>
 
-## 1. Lógica de Programação, Linguagem C e Ferramentas
+## 0. Terminal e DOS
+Antes de começar é necessário ter um conhecimento básico do funcionamento de terminais, para o uso de algumas ferramentas que serão abordadas ao longo desse material, especialmente o Git e GitHub!
+- O terminal pode navegar entre os arquivos e pastas de um computador. As **pastas** são chamadas de **diretórios**.
+- DOS: Significa "Sistema Operacional de Disco", um sistema que roda no terminal e possui um interpretador de comandos. Os comandos mais básicos do DOS são:
+
+Comandos | Significado
+--- | ---
+dir | "directory", lista tudo que está dentro de determinado diretório
+cd | "change directory", navega entre diretórios
+mkdir | "make directory", cria um novo diretório
+UNIDADE: | muda de disco com a determinada letra da unidade ("C:", "D:")
+
+## 1. Git & GitHub
+
+### Comandos do GIT
+O Git é uma ferramenta de versionamento que salva o progresso durante o desenvolvimento de algum código ou projeto.
+- Os comandos básicos do Git são:
+
+Comandos | Significado
+--- | ---
+git init | Inicia o repositório no diretório do projeto
+git add . | Rastreia os arquivos para adicionados/modificados/excluido, salvando suas modificações[^1]
+git commit -m "Mensagem" | Todos os arquivos rastreados são guardados juntos no mesmo "commit" e descritos pela mensagem[^2]
+
+### GitHub
+Para salvar um arquivo de maneira remota na nuvem, é utilizado o GitHub. Tudo que está no repositório local é enviado para um repositório no site que pode ser acessado de qualquer lugar. O passo a passo a seguir cobre o processo de enviar os arquivos locais para um repositório remoto:
+
+1. Configurar dados do usuários
+  - Dentro do terminal, você deve colocar as informações da sua conta usando os seguintes comandos
+
+Comandos | Significado
+--- | ---
+git config --global user.email "exemplo@email.com" | Adicione o email que está relacionado a sua conta do GitHub
+git config --global user.name "seu-usuario" | Adicione o seu nome de usuário do GitHub
+
+2. Adicionar um destino remoto
+  - Será necessário adicionar um destino remoto para que o Git saiba para onde as mudanças do repositório devem ser enviadas. É possível adicionar mais de um destino e remover ou alterar destinos existentes.
+
+Comandos | Significado
+--- | ---
+git remote add \<nome do destino\> \<link de repositorio\> | Cria um novo destino remoto com um link para determinado repositório.
+git remote remove \<nome do destino\> | Remove um destino criado.
+git remote set-url \<nome do destino\> \<novo link\> | Altera o link de determinado destino já existente.
+git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto
+
+### Indo além...
+Complementando o que foi falado durante nossa prática introdutória do Git durando o nivelamento, vamos adicionar nessa seção alguns elementos a mais.
+
+### Clonando repositórios
+Uma vez que temos nosso repositório na nuvem, a gente consegue devolver ele para nossa máquina local utilizando os seguintes passos:
+
+1. Pegar a URL
+  - Na página do nosso repositório remoto no GitHub, clicamos no botão `CODE` e copiamos a URL.
+<img width="599" height="525" alt="image" src="https://github.com/user-attachments/assets/130ee0d2-0659-4575-a21d-daff1f6bc312" />
+2. Clonando no Terminal
+  - Em um diretório, utilizamos o seguinte comando:
+Comandos | Significado
+--- | ---
+git clone https://github.com/usuario/nome-projeto.git |  Cria um novo diretório contendo o projeto salvo na URL
+3. Acessando o projeto
+  - Utilizando os comandos do DOS previamente mencionados, acessamos os arquivos dentro do novo diretório!
+
+
+## 2. Lógica de Programação, Linguagem C e Ferramentas
 ### Conceitos Básicos
 - Algoritmos: conjunto de instruções lógicas, finitas e bem definidas, que tem o objetivo de executar tarefas específicas <br>
 Exemplo: Passo a passo de fazer café:
@@ -80,66 +143,6 @@ gcc <arquivo do código> -o <nome do arquivo executável>
 
   - Prontinho! Essa é uma demonstração da compilação do código de exemplo de código em C mencionado acima.
 
-## 2. Git & GitHub
-### Terminal e DOS
-O Git é composto por muitos comandos de terminal, portanto é extremamente importante ter um conhecimento básico do funcionamento de terminais.
-- O terminal pode navegar entre os arquivos e pastas de um computador. As **pastas** são chamadas de **diretórios**.
-- DOS: Significa "Sistema Operacional de Disco", um sistema que roda no terminal e possui um interpretador de comandos. Os comandos mais básicos do DOS são:
-
-Comandos | Significado
---- | ---
-dir | "directory", lista tudo que está dentro de determinado diretório
-cd | "change directory", navega entre diretórios
-mkdir | "make directory", cria um novo diretório
-UNIDADE: | muda de disco com a determinada letra da unidade ("C:", "D:")
-
-### Comandos do GIT
-O Git é uma ferramenta de versionamento que salva o progresso durante o desenvolvimento de algum código ou projeto.
-- Os comandos básicos do Git são:
-
-Comandos | Significado
---- | ---
-git init | Inicia o repositório no diretório do projeto
-git add . | Rastreia os arquivos para adicionados/modificados/excluido, salvando suas modificações[^1]
-git commit -m "Mensagem" | Todos os arquivos rastreados são guardados juntos no mesmo "commit" e descritos pela mensagem[^2]
-
-### GitHub
-Para salvar um arquivo de maneira remota na nuvem, é utilizado o GitHub. Tudo que está no repositório local é enviado para um repositório no site que pode ser acessado de qualquer lugar. O passo a passo a seguir cobre o processo de enviar os arquivos locais para um repositório remoto:
-
-1. Configurar dados do usuários
-  - Dentro do terminal, você deve colocar as informações da sua conta usando os seguintes comandos
-
-Comandos | Significado
---- | ---
-git config --global user.email "exemplo@email.com" | Adicione o email que está relacionado a sua conta do GitHub
-git config --global user.name "seu-usuario" | Adicione o seu nome de usuário do GitHub
-
-2. Adicionar um destino remoto
-  - Será necessário adicionar um destino remoto para que o Git saiba para onde as mudanças do repositório devem ser enviadas. É possível adicionar mais de um destino e remover ou alterar destinos existentes.
-
-Comandos | Significado
---- | ---
-git remote add \<nome do destino\> \<link de repositorio\> | Cria um novo destino remoto com um link para determinado repositório.
-git remote remove \<nome do destino\> | Remove um destino criado.
-git remote set-url \<nome do destino\> \<novo link\> | Altera o link de determinado destino já existente.
-git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto
-
-### Indo além...
-Complementando o que foi falado durante nossa prática introdutória do Git durando o nivelamento, vamos adicionar nessa seção alguns elementos a mais.
-
-### Clonando repositórios
-Uma vez que temos nosso repositório na nuvem, a gente consegue devolver ele para nossa máquina local utilizando os seguintes passos:
-
-1. Pegar a URL
-  - Na página do nosso repositório remoto no GitHub, clicamos no botão `CODE` e copiamos a URL.
-<img width="599" height="525" alt="image" src="https://github.com/user-attachments/assets/130ee0d2-0659-4575-a21d-daff1f6bc312" />
-2. Clonando no Terminal
-  - Em um diretório, utilizamos o seguinte comando:
-Comandos | Significado
---- | ---
-git clone https://github.com/usuario/nome-projeto.git |  Cria um novo diretório contendo o projeto salvo na URL
-3. Acessando o projeto
-  - Utilizando os comandos do DOS previamente mencionados, acessamos os arquivos dentro do novo diretório!
 
 ## 3. Tabela Verdade
 
