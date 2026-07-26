@@ -1,5 +1,8 @@
-## Nivelamento TADS - Calouros 2026/2
+# Nivelamento TADS - Calouros 2026/2
 Repositório utilizado para armazenar exercícios e como base de estudos para introdução ao conteúdo de Git & GitHub.
+
+## Introdução
+Olá! Preparamos esse super resumão de tudo que falamos durante o nivelamento. Use esse arquivo como uma pequena cola durante as aulas do período! :D
 
 <details open><summary>
 
@@ -119,7 +122,19 @@ Comandos | Significado
 git remote add \<nome do destino\> \<link de repositorio\> | Cria um novo destino remoto com um link para determinado repositório.
 git remote remove \<nome do destino\> | Remove um destino criado.
 git remote set-url \<nome do destino\> \<novo link\> | Altera o link de determinado destino já existente.
-git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto.
+git remote get-url \<nome do destino\> | Ver link definido para determinado destino remoto
+
+### Indo além...
+Complementando o que foi falado durante nossa prática introdutória do Git durando o nivelamento, vamos adicionar nessa seção alguns elementos a mais.
+
+### Clonando repositórios
+Uma vez que temos nosso repositório na nuvem, a gente consegue devolver ele para nossa máquina local utilizando os seguintes passos:
+
+1. Pegar a URL
+  - Na página do nosso repositório remoto no GitHub, clicamos no botão `CODE` e copiamos a URL.
+<img width="599" height="525" alt="image" src="https://github.com/user-attachments/assets/130ee0d2-0659-4575-a21d-daff1f6bc312" />
+2. Clonando no Terminal
+
 
 ## 3. Tabela Verdade
 
